@@ -17,7 +17,7 @@ object FunctionAsArgument {
     operation(count())
 
     println()
-    var logMe = log(new Date(), _ : String);
+    var logMe = log(new Date(), _ : String)
     println("Partial Function Calling:")
     logMe("This")
     logMe("is")
@@ -32,6 +32,16 @@ object FunctionAsArgument {
 
     println()
     println("Curried Function Chain: " + strcat("Hello")(" World!"))
+
+    val temp1 = "Hello "
+    val temp2 = temp1 {0}
+    println()
+    println("Test {} syntax : " + temp2)
+
+    val myMap = Map("x" -> "1", "y" -> 2)
+    val a = myMap { "x" }
+    println(a)
+
    }
 
   def delayed( t: => Long ): Unit = {
@@ -44,11 +54,11 @@ object FunctionAsArgument {
     System.nanoTime
   }
 
-  var counter = 0L;
+  var counter = 0L
 
   def count(): Long = {
     counter += 1
-    return counter
+    counter
   }
 
   def operation( c: => Long): Unit = {

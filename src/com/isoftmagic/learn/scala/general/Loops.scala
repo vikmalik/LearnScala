@@ -23,12 +23,26 @@ object Loops {
     }
 
     println("Yield List")
-    val myList = for ( i <- numList
+    var myList = for ( i <- numList
           if i != 3; if i < 8 ) yield i
 
     for ( i <- myList ) {
       println(i)
     }
 
+    println()
+    //for( i : nuList){
+    //    for ( j: myList)
+    //}
+    myList = for {
+      i <-  numList
+      j <- myList
+
+    } yield i
+
+    println("Yield list")
+    for ( i <- myList ) {
+      print(i)
+    }
   }
 }

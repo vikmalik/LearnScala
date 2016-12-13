@@ -44,5 +44,15 @@ object Loops {
     for ( i <- myList ) {
       print(i)
     }
+
+    println()
+    val customObjectList = for {
+      i <-  numList
+      j <- myList
+    } yield CustomObject(i, j)
+
+    println("Yield Map" + customObjectList)
   }
+
+  case class CustomObject(i: Int, j:Int)
 }

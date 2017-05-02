@@ -26,3 +26,11 @@ class MultipleConstructors(arg1: Int, arg2: String) {
     return "%d %s".format(arg1, arg2)
   }
 }
+
+object MultipleConstructorsTest extends App {
+  var o = new MultipleConstructors()
+  println(o)
+
+  val m1 : MultipleConstructors = new MultipleConstructors(5, "World")
+  println(m1)
+}

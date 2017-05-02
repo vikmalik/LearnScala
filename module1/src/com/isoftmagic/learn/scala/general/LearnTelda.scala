@@ -8,7 +8,7 @@ object LearnTelda {
   def main(args: Array[String]): Unit = {
 
     //This is unary operator
-    val a = ~1
+    val a = ~3
     print(a)
 
   }

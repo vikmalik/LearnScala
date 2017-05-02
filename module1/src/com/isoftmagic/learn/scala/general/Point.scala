@@ -17,3 +17,15 @@ class Point (xa: Int, ya: Int) {
   }
 
 }
+object PointTest {
+  def main(args: Array[String]): Unit = {
+    val p1 = new Point(3, 4);
+
+    println(p1);
+
+    p1.move(4, 5)
+
+    print(p1)
+  }
+
+}
